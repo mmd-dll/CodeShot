@@ -57,6 +57,12 @@ print(a)
 *  **borland**
 *  **rainbow_dash**
 
+برای دیدن لیست کامل تم ها 
+```python
+from pygments.styles import get_all_styles
+
+print(list(get_all_styles()))
+```
 #
 ## توضیحات تکمیلی
 این کد توسط [محمدرضا](https://t.me/RedSnows) توسعه پیدا کرده امیدوارم این کد برای شما مفید باشه
