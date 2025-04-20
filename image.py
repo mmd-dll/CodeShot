@@ -67,7 +67,7 @@ def image_generate(code, moddle='gruvbox-dark', name='code', lang=None):
             padding_height = 200
             background_width = code_width + padding_width
             background_height = code_height + padding_height
-            background = Image.new("RGBA", (background_width, background_height), (100, 100, 100))
+            background = Image.new("RGBA", (background_width, background_height), (169, 169, 169))
             x_offset = (background_width - code_width) // 2
             y_offset = (background_height - code_height) // 2
 
@@ -78,7 +78,7 @@ def image_generate(code, moddle='gruvbox-dark', name='code', lang=None):
             background.paste(img, (x_offset, y_offset), mask=img)
 
             background = background.filter(ImageFilter.GaussianBlur(radius=15))
-            background.paste(img, (x_offset, y_offset), mask=img)  
+            background.paste(img, (x_offset, y_offset), mask=img) 
 
             final_image = BytesIO()
             background.save(final_image, format="PNG", quality=100)
@@ -88,3 +88,4 @@ def image_generate(code, moddle='gruvbox-dark', name='code', lang=None):
             return 'Done'
     except Exception as e:
         return f'Error: {e}'
+
