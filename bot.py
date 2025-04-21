@@ -7,7 +7,7 @@ from image import image_generate
 from time import sleep
 from random import randint
 
-bot = TeleBot("")
+bot = TeleBot("YOUR-TOKWN")
 
 data = {
     'admins':[],
